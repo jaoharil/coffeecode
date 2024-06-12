@@ -4,36 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Style for hiding and showing the menu in small screens */
+      .hidden {
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+    </style>
   </head>
   <body class="bg-indigo-950 text-indigo-500">
     <!-- header -->
     <header class="sticky top-0 bg-indigo-950 py-5 z-10">
-      <nav class="w-9/12 flex flex-row mx-auto">
-        <div class="uppercase text-lg basis-1/4">
+      <nav class="w-11/12 md:w-9/12 mx-auto flex flex-wrap items-center justify-between">
+        <div class="uppercase text-lg">
           <!-- logo -->
-          <!-- <img src="img/gambar1.png" alt="poto 2" /> -->
           <span class="font-extrabold text-white">Coffee</span>
           <span class="font-extralight">Code</span>
         </div>
-        <div class="basis-1/2 flex items-center justify-evenly">
-          <!-- link -->
-          <a href=""><span>Coffee</span></a>
-          <a href=""><span>Website</span></a>
-          <a href=""><span>expriense</span></a>
-          <a href=""><span>contact</span></a>
-        </div>
-        <div class="basis-1/4 flex justify-end">
-          <!-- dark mode -->
-          <span class="hidden dark:inline end:0"
-            ><svg viewBox="0 0 24 24" fill="none" class="w-6 h-6">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path>
-              <path
-                d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
-                class="fill-sky-500"
-              ></path>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg
-          ></span>
+        <button class="block md:hidden px-3 py-2 border rounded text-indigo-200 border-indigo-400 hover:text-white hover:border-white" id="nav-toggle">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+        <div class="hidden md:flex md:items-center md:w-auto w-full" id="nav-content">
+          <div class="text-sm md:flex-grow">
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4">Coffee</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4">Website</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4">Experience</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-white hover:text-gray-400">Contact</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -47,18 +51,18 @@
           <div class="basis-1/2">
             <div class="flex items-center">
               <svg class="stroke-gray-400 stroke-2 h-5 w-5">
-                <line x1="0" y1="10px" x2="10px" y2="10px" />
+                <line x1="0" y1="10" x2="10" y2="10" />
               </svg>
-              <h2 class="uppercase text-xs text-extralight tracking-ngangkang">Shopecode</h2>
+              <h2 class="uppercase text-xs tracking-ngangkang text-gray-400">Shopecode</h2>
               <svg class="stroke-gray-400 stroke-2 h-5 w-5">
-                <line x1="0" y1="10px" x2="10px" y2="10px" />
+                <line x1="0" y1="10" x2="10" y2="10" />
               </svg>
             </div>
             <h3 class="font-bold text-4xl text-white">
               <span>Coffee</span>
               <span class="text-blue-700">Code.</span>
             </h3>
-            <p class="font-light">codecofee adalah platform jualan coffee dan code, dimana flatform ini mejual berbaiga jenis coffe dan code website atau bisa dikatakan joki website</p>
+            <p class="font-light text-white">Codecofee adalah platform jualan coffee dan code, dimana platform ini menjual berbagai jenis coffee dan code website atau bisa dikatakan joki website.</p>
           </div>
           <div class="basis-1/2">
             <img class="mx-auto" src="img/gambar3.png" alt="poto 2" />
@@ -68,17 +72,57 @@
       <!-- end hero section -->
       <!-- coffee -->
       <div class="bg-gradient-to-t from-white to-indigo-950">
-        <div class="flex flex-col place-items-center">
-          <div class="flex items-center">
-            <svg class="stroke-white stroke-2 h-5 w-5">
-              <line x1="0" y1="10px" x2="10px" y2="10px" />
-            </svg>
-            <h2 class="uppercase text-xs text-extralight tracking-ngangkang text-white">Coffee</h2>
-            <svg class="stroke-white stroke-2 h-5 w-5">
-              <line x1="0" y1="10px" x2="10px" y2="10px" />
-            </svg>
+        <div class="w-9/12 mx-auto">
+          <div class="flex flex-col items-center">
+            <div class="flex items-center mt-10">
+              <svg class="stroke-white stroke-2 h-5 w-5">
+                <line x1="0" y1="10" x2="10" y2="10" />
+              </svg>
+              <h2 class="uppercase text-xs tracking-ngangkang text-white">Coffee</h2>
+              <svg class="stroke-white stroke-2 h-5 w-5">
+                <line x1="0" y1="10" x2="10" y2="10" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold text-white">Order Coffee</h3>
           </div>
-          <h3 class="text-3xl font-bold">Order Coffee</h3>
+          <!-- card -->
+          <div class="bg-slate-50 grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-10 mt-10 py-10">
+            <!-- card1 -->
+            <div class="shadow-lg">
+              <div class="flex flex-col items-center p-5">
+                <div>
+                  <img src="img/kopi1.jpeg" alt="kopi" class="w-20" />
+                </div>
+                <h4 class="font-bold mt-5">Kopi Langka Lombok Timur</h4>
+                <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maxime porro expedita enim corrupti eligendi, debitis delectus.</p>
+                <div class="bg-blue-200 mt-5 py-2 px-4 rounded-full">
+                  <p>Order</p>
+                </div>
+              </div>
+            </div>
+            <!-- card2 -->
+            <div class="shadow-lg p-5 flex flex-col items-center">
+              <div>
+                <img src="img/kopi2.jpeg" alt="kopi" class="w-20" />
+              </div>
+              <h4 class="font-bold mt-5">Kopi Specialty Bali</h4>
+              <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maxime porro expedita enim corrupti eligendi, debitis delectus.</p>
+              <div class="bg-blue-200 mt-5 py-2 px-4 rounded-full">
+                <p>Order</p>
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="shadow-lg p-5 flex flex-col items-center">
+              <div>
+                <img src="img/kopi3.jpeg" alt="kopi" class="w-20" />
+              </div>
+              <h4 class="font-bold mt-5">Kopi Toraja</h4>
+              <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maxime porro expedita enim corrupti eligendi, debitis delectus.</p>
+              <div class="bg-blue-200 mt-5 py-2 px-4 rounded-full">
+                <p>Order</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end coffee -->
@@ -88,5 +132,20 @@
     <!-- footer -->
     <footer></footer>
     <!-- end footer -->
+
+    <!-- scrif -->
+    <script>
+      // JavaScript to handle the navbar toggle on small screens
+      document.getElementById('nav-toggle').onclick = function () {
+        var navContent = document.getElementById('nav-content');
+        if (navContent.classList.contains('hidden')) {
+          navContent.classList.remove('hidden');
+          navContent.classList.add('block');
+        } else {
+          navContent.classList.remove('block');
+          navContent.classList.add('hidden');
+        }
+      };
+    </script>
   </body>
 </html>
